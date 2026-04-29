@@ -1,0 +1,335 @@
+/* Scoped to .wtw-blocks so nothing leaks.
+       Greycliff CF is loaded by the parent template. */
+    .wtw-blocks{font-family:'Greycliff CF',sans-serif;color:#292D31;}
+    .wtw-blocks *{box-sizing:border-box;}
+
+    /* ── Section scaffolding (matches the rest of divadance.com) ── */
+    .wtw-blocks .wtw-section{padding:80px 56px;}
+    .wtw-blocks .wtw-section--blush{background:#FDF1F7;}
+    .wtw-blocks .wtw-inner{max-width:1200px;margin:0 auto;}
+    .wtw-blocks .wtw-eyebrow{
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:#E11A77;
+      margin:0 0 12px;
+    }
+    .wtw-blocks .wtw-h2{
+      font-family:'Greycliff CF',sans-serif;
+      font-size:44px;
+      line-height:1;
+      letter-spacing:-.04em;
+      font-weight:800;
+      color:#891049;
+      margin:0 0 16px;
+    }
+    .wtw-blocks .wtw-lede{
+      font-size:18px;
+      line-height:1.55;
+      font-weight:300;
+      color:#292D31;
+      margin:0 0 40px;
+      max-width:720px;
+    }
+
+    /* ── Block 1 · Outfit Builder (Bottoms / Tops / Shoes) ── */
+    .wtw-blocks .wtw-outfit-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+    }
+    .wtw-blocks .wtw-outfit{
+      background:#ffffff;
+      border-radius:20px;
+      padding:32px 30px 28px;
+      box-shadow:0 6px 18px -6px rgba(137,16,73,.14);
+      display:flex;
+      flex-direction:column;
+    }
+    .wtw-blocks .wtw-outfit-num{
+      font-size:48px;
+      line-height:1;
+      font-weight:800;
+      letter-spacing:-.04em;
+      color:#E11A77;
+      margin:0 0 6px;
+    }
+    .wtw-blocks .wtw-outfit-name{
+      font-family:'Greycliff CF',sans-serif;
+      font-size:22px;
+      font-weight:800;
+      letter-spacing:-.02em;
+      color:#891049;
+      margin:0 0 18px;
+      line-height:1.15;
+    }
+    .wtw-blocks .wtw-outfit-list{
+      list-style:none;
+      padding:0;
+      margin:0 0 22px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      flex:1;
+    }
+    .wtw-blocks .wtw-outfit-list li{
+      font-size:15.5px;
+      font-weight:300;
+      line-height:1.45;
+      color:#292D31;
+      padding-left:22px;
+      position:relative;
+    }
+    .wtw-blocks .wtw-outfit-list li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:9px;
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:#E11A77;
+    }
+    .wtw-blocks .wtw-outfit-skip{
+      margin:auto 0 0;
+      padding:14px 16px;
+      background:#FDF1F7;
+      border-radius:12px;
+      font-size:13.5px;
+      font-weight:700;
+      line-height:1.5;
+      color:#891049;
+      letter-spacing:.01em;
+    }
+    .wtw-blocks .wtw-outfit-skip span{
+      display:inline-block;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:#E11A77;
+      margin-right:6px;
+    }
+    @media (max-width:900px){
+      .wtw-blocks .wtw-outfit-grid{grid-template-columns:1fr;}
+    }
+
+    /* ── Block 2 · Class-Type Crosswalk ── */
+    .wtw-blocks .wtw-classtype-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+    }
+    .wtw-blocks .wtw-classtype{
+      background:#ffffff;
+      border-radius:20px;
+      padding:32px 30px 28px;
+      box-shadow:0 6px 18px -6px rgba(137,16,73,.14);
+      display:flex;
+      flex-direction:column;
+    }
+    .wtw-blocks .wtw-classtype-tag{
+      align-self:flex-start;
+      display:inline-block;
+      padding:6px 14px;
+      background:#FDF1F7;
+      color:#891049;
+      border-radius:100px;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      margin:0 0 14px;
+    }
+    .wtw-blocks .wtw-classtype-name{
+      font-family:'Greycliff CF',sans-serif;
+      font-size:26px;
+      font-weight:800;
+      letter-spacing:-.03em;
+      color:#891049;
+      margin:0 0 14px;
+      line-height:1.1;
+    }
+    .wtw-blocks .wtw-classtype-body{
+      font-size:15.5px;
+      font-weight:300;
+      line-height:1.6;
+      color:#292D31;
+      margin:0 0 24px;
+      flex:1;
+    }
+    .wtw-blocks .wtw-classtype-cta{
+      align-self:flex-start;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:12px 22px 12px 24px;
+      background:#E11A77;
+      color:#ffffff;
+      border-radius:100px;
+      font-size:14px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      text-decoration:none;
+      box-shadow:inset 4px 0 0 0 rgba(137,16,73,.5);
+      transition:background .18s ease, transform .18s ease;
+    }
+    .wtw-blocks .wtw-classtype-cta:hover{
+      background:#891049;
+      transform:translateY(-1px);
+    }
+    .wtw-blocks .wtw-classtype-cta::after{
+      content:"\2192";
+      font-weight:700;
+    }
+    @media (max-width:900px){
+      .wtw-blocks .wtw-classtype-grid{grid-template-columns:1fr;}
+    }
+
+    /* ── Block 3 · Confidence Stat Card ── */
+    .wtw-blocks .wtw-stats{
+      max-width:880px;
+      margin:0 auto;
+      background:#ffffff;
+      border-radius:24px;
+      padding:48px 48px 40px;
+      box-shadow:0 18px 40px -12px rgba(137,16,73,.18);
+      text-align:center;
+    }
+    .wtw-blocks .wtw-stats-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      margin:0 0 28px;
+    }
+    .wtw-blocks .wtw-stat-num{
+      font-size:88px;
+      line-height:1;
+      letter-spacing:-.05em;
+      font-weight:800;
+      color:#E11A77;
+      margin:0 0 8px;
+    }
+    .wtw-blocks .wtw-stat-label{
+      font-size:14px;
+      font-weight:700;
+      line-height:1.45;
+      letter-spacing:.04em;
+      color:#891049;
+      margin:0;
+      max-width:280px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .wtw-blocks .wtw-stat-divider{
+      width:1px;
+      background:#891049;
+      opacity:.18;
+    }
+    .wtw-blocks .wtw-stats-quote{
+      font-size:20px;
+      line-height:1.5;
+      font-weight:300;
+      color:#292D31;
+      margin:0 auto 8px;
+      max-width:680px;
+    }
+    .wtw-blocks .wtw-stats-quote b{
+      font-weight:700;
+      color:#891049;
+    }
+    .wtw-blocks .wtw-stats-photo-anchor{
+      margin:32px auto 24px;
+      max-width:520px;
+      min-height:0;
+      /* H2 anchor for photo injection — leave room only when populated */
+    }
+    .wtw-blocks .wtw-stats-source{
+      font-size:12.5px;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:#891049;
+      opacity:.7;
+      margin:24px 0 0;
+    }
+    @media (max-width:600px){
+      .wtw-blocks .wtw-stats{padding:36px 28px 32px;}
+      .wtw-blocks .wtw-stats-row{grid-template-columns:1fr;gap:18px;}
+      .wtw-blocks .wtw-stat-num{font-size:64px;}
+      .wtw-blocks .wtw-stats-quote{font-size:17px;}
+    }
+
+    /* ── Block 4 · What NOT to Wear (skip list) ── */
+    .wtw-blocks .wtw-skip-list{
+      max-width:920px;
+      margin:0 auto;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .wtw-blocks .wtw-skip{
+      display:grid;
+      grid-template-columns:56px 1fr;
+      gap:20px;
+      align-items:start;
+      background:#ffffff;
+      border-radius:16px;
+      padding:22px 26px;
+      box-shadow:0 4px 14px -6px rgba(137,16,73,.12);
+    }
+    .wtw-blocks .wtw-skip-icon{
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      background:#FDF1F7;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#E11A77;
+      flex-shrink:0;
+    }
+    .wtw-blocks .wtw-skip-icon svg{
+      width:22px;
+      height:22px;
+      stroke:currentColor;
+      stroke-width:2.5;
+      fill:none;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+    .wtw-blocks .wtw-skip-name{
+      font-family:'Greycliff CF',sans-serif;
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:-.02em;
+      color:#891049;
+      margin:0 0 4px;
+      line-height:1.2;
+    }
+    .wtw-blocks .wtw-skip-desc{
+      font-size:15px;
+      font-weight:300;
+      line-height:1.55;
+      color:#292D31;
+      margin:0;
+    }
+    @media (max-width:600px){
+      .wtw-blocks .wtw-skip{grid-template-columns:40px 1fr;gap:14px;padding:18px 20px;}
+      .wtw-blocks .wtw-skip-icon{width:36px;height:36px;}
+      .wtw-blocks .wtw-skip-icon svg{width:18px;height:18px;}
+    }
+
+    /* ── Footer timestamp ── */
+    .wtw-blocks .wtw-timestamp{
+      max-width:1200px;
+      margin:0 auto;
+      padding:32px 56px 8px;
+      text-align:right;
+      font-size:13px;
+      font-style:italic;
+      font-weight:300;
+      color:#808D99;
+    }
